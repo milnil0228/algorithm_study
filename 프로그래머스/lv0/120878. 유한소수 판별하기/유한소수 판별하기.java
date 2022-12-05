@@ -15,6 +15,13 @@ class Solution {
                 newB /= 5;
             }
         }
+//         for (;b%2 == 0;) {   //for문으로 while문처럼 쓰기
+//             b = b/2;
+//         }
+//         for (;b%5 == 0;) {
+//             b = b/5;
+//         }
+        
         if (newB == 1) {
             return 1;
         }
