@@ -15,3 +15,8 @@ class Solution {
         return answer;
     }
 }
+// class Solution {     //가장 간단하고 직관적인 답
+//     public int solution(int[] numbers, int k) {
+//         return (k-1)*2 % numbers.length+1;
+//     }
+// }
