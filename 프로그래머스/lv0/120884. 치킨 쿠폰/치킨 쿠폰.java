@@ -11,5 +11,10 @@ class Solution {
         }
         answer = serviceChicken;
         return answer;
+        // int answer = chicken/9;
+        // if(chicken>1&&chicken%9==0){
+        //     answer--;
+        // }
+        // return answer;
     }
 }
