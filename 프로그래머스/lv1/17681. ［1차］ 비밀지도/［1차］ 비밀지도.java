@@ -10,13 +10,13 @@ class Solution {
         for (int i = 0; i < n; i++) { //라인 별 특징
             String temp = ""; //라인마다 새로 생성해주는 임시 저장소
             for (int j = 1; j <= n; j++) {
-                if (arr1[i] % 2 == 1 || arr2[i] % 2 == 1) { //나머지 1인 경우 #추가
+                if (arr1[i] % 2 == 1 || arr2[i] % 2 == 1) { //두 수의 나머지 중 1개 이상 1인 경우 #추가
                     temp = "#" + temp;
                 }
                 else {
                     temp = " " + temp;
                 }
-                arr1[i] /= 2;   //2로 나눠주기
+                arr1[i] /= 2;
                 arr2[i] /= 2;
             }
             answer[i] = temp;   //정답에 넣어주기
