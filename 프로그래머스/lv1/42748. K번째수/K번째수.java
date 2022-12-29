@@ -9,7 +9,7 @@ class Solution {
     }
     
     public int[] solution(int[] array, int[][] commands) {
-        // Object[] answer = Arrays.stream(commands).map(i -> kthNumber(array, i)).toArray();
+        // Object[] answer = Arrays.stream(commands).map(i -> kthNumber(array, i)).toArray();   //스트림 써보기
         int[] answer = new int[commands.length];
         for (int i = 0; i < commands.length; i++) {
             answer[i] = kthNumber(array, commands[i]);
