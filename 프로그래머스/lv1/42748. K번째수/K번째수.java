@@ -8,8 +8,12 @@ class Solution {
         return result[command[2] - 1];
     }
     
-    public Object[] solution(int[] array, int[][] commands) {
-        Object[] answer = Arrays.stream(commands).map(i -> kthNumber(array, i)).toArray();
+    public int[] solution(int[] array, int[][] commands) {
+        // Object[] answer = Arrays.stream(commands).map(i -> kthNumber(array, i)).toArray();
+        int[] answer = new int[commands.length];
+        for (int i = 0; i < commands.length; i++) {
+            answer[i] = kthNumber(array, commands[i]);
+        }
         return answer;
     }
 }
