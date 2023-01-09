@@ -1,6 +1,6 @@
 class Solution {
     public long solution(int price, int money, int count) {
-        long cost = 0;
+        long cost = 0;  // 비용이 상당히 클 경우 int로 다 안 받아짐
         for (int i = 1; i <= count; i++) {
             cost += price * i;
         }
