@@ -1,9 +1,9 @@
 class Solution {
-    public long[] solution(long n) {
+    public int[] solution(long n) {
         String Str = n + "";
-        long[] answer = new long[Str.length()];
+        int[] answer = new int[Str.length()];
         for (int i = 0; i < Str.length(); i++) {
-            answer[i] =  n % 10;
+            answer[i] =  (int) (n % 10);
             n /= 10;
         }
         return answer;
