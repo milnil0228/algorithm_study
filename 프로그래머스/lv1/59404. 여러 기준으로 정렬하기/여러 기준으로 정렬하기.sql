@@ -1,0 +1,2 @@
+SELECT ANIMAL_ID, NAME, DATETIME FROM ANIMAL_INS
+order by name, datetime desc
