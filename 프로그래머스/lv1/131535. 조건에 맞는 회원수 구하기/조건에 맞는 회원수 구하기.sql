@@ -1,2 +1,2 @@
-SELECT count(USER_ID) as USER FROM USER_INFO
-WHERE JOINED like '2021%' and AGE between 20 and 29
+SELECT count(AGE) as USER FROM USER_INFO
+WHERE YEAR(JOINED) = 2021 and AGE between 20 and 29
