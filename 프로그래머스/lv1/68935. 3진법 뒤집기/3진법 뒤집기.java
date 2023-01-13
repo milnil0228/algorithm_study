@@ -1,10 +1,18 @@
+import java.util.*;
+
 class Solution {
     public int solution(int n) {
-        String Ternary = "";
+        int answer = 0;
+        ArrayList<Integer> toTernary = new ArrayList<Integer>();
         while (n > 0) {
-            Ternary += n % 3;
+            toTernary.add(n % 3);
             n /= 3;
         }
-        return Integer.parseInt(Ternary,3);
+        int digit = 1;
+        for (int i = toTernary.size() - 1; i >= 0; i--) {
+            answer += toTernary.get(i) * digit;
+            digit *= 3;
+        }
+        return answer;
     }
 }
