@@ -1,8 +1,12 @@
-SELECT main.FOOD_TYPE,main.REST_ID,main.REST_NAME,main.FAVORITES
-      FROM (select food_type, max(favorites) as max from REST_INFO group by food_type) sub
-      inner join rest_info main on sub.food_type = main.food_type and sub.max = main.favorites
-GROUP BY FOOD_TYPE
-ORDER BY FOOD_TYPE DESC
+SELECT ri.FOOD_TYPE,ri.REST_ID,ri.REST_NAME,ri.FAVORITES
+FROM (select food_type, max(favorites) as max -- 음식 종류별 가장 높은 좋아요 수
+     from REST_INFO
+     group by food_type) sub
+inner join rest_info ri
+     on sub.food_type = ri.food_type -- 음식 종류 매칭
+     and sub.max = ri.favorites -- subquery에서 찾은 가장 높은 좋아요 매칭
+GROUP BY ri.FOOD_TYPE
+ORDER BY ri.FOOD_TYPE DESC
 
 # SELECT *
 # FROM (SELECT FOOD_TYPE,REST_ID,REST_NAME,FAVORITES
